@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ll"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:gravity="center_horizontal"
+    tools:context=".auth.OtpActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Verify +919911411574"
+        android:textSize="26sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:id="@+id/verifyTv"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="18sp"
+        tools:text="Waiting to automatically detect an SMS sent to \n +9817262633 Wrong Number?"
+        android:textColor="@color/grey"
+        android:id="@+id/waitingTv"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text = "seconds remaining :  12 "
+        android:id="@+id/counterTv"
+        android:gravity="center"
+        android:textSize="17sp"
+        android:padding="5dp"
+        android:layout_marginTop="5dp"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sentCodeEt"
+        android:layout_marginTop="16dp"
+        android:inputType="phone"
+        android:hint="- - - - - -"
+        android:letterSpacing="0.9"
+        android:maxLines="1"
+        android:maxLength="6"
+        tools:text="123456"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:singleLine="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter 6-digit code"
+        android:textSize="16sp"
+        android:padding="4dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="send verification code"
+        android:id="@+id/verificationBtn"
+        android:layout_gravity="center"
+        android:padding="15dp"
+        android:textSize="15sp"
+        android:textAllCaps="true"
+        android:textStyle="normal"
+        app:cornerRadius="5dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:text="resend sms"
+        android:enabled="false"
+        android:id="@+id/resendBtn"
+        android:layout_gravity="center"
+        android:textStyle="normal"
+        app:cornerRadius="5dp"/>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:max="100"
+        android:layout_marginTop="60dp"
+        android:progress="30"
+        style="@android:style/Widget.Material.Light.ProgressBar.Inverse"
+        android:id="@+id/progressBar"/>
+
+</LinearLayout>
